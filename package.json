@@ -1,8 +1,31 @@
 {
   "name": "ai-bunny",
+  "version": "1.0.0",
+  "description": "A Retrieval-Augmented Generation (RAG) system built with TypeScript, ChromaDB, and Google's Gemini AI",
   "module": "index.ts",
   "type": "module",
   "private": true,
+  "scripts": {
+    "start": "bun run rag_system.ts",
+    "dev": "bun run index.ts",
+    "reset": "bun run rag_system.ts --reset",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down",
+    "docker:logs": "docker-compose logs -f chroma",
+    "check-chroma": "curl http://localhost:8000/api/v1/heartbeat"
+  },
+  "keywords": [
+    "rag",
+    "chromadb",
+    "langchain",
+    "gemini",
+    "typescript",
+    "ai",
+    "embeddings",
+    "vector-database"
+  ],
+  "author": "Gaurav",
+  "license": "MIT",
   "devDependencies": {
     "@types/bun": "latest"
   },
